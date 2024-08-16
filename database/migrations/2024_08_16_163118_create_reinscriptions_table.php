@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('reinscriptions', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('etudiant_id')->constrained()->onDelete('cascade');
+            $table->boolean('valide')->default(false);
             $table->timestamps();
         });
     }
