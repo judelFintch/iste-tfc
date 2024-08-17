@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nom');
             $table->string('prenom');
             $table->string('email')->unique();
-            $table->foreignId('filiere_id')->constrained()->onDelete('cascade');
+            $table->foreignId('filiere_id');
             $table->boolean('is_reinscrit')->default(false);
             $table->timestamps();
         });

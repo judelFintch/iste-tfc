@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('titre');
             $table->dateTime('date');
-            $table->foreignId('filiere_id')->constrained()->onDelete('cascade');
+            $table->foreignId('filiere_id');
             $table->timestamps();
         });
     }
