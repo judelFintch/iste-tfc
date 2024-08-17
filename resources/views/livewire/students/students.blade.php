@@ -61,12 +61,24 @@
             </div>
             <hr>
             <div class="row">
-                <legend>Filtrez le Dossier</legend>
+                <legend>Recherche Etudiant</legend>
                 <div class="col-sm-5">
                     <input type="text" placeholder="Tapez la plaque du dossier" wire:model.debounce.500ms="query" class="form-control mb-3 col-sm-5 ">
                 </div>
             </div>
             <hr>
+
+            @if (session()->has('message'))
+            <div class="alert alert-success">
+                {{ session('message') }}
+            </div>
+            @endif
+           
+            @if($isCreate)
+            @include('livewire.students.create')
+            @endif
+            @include('livewire.students.list')
+
         </div>
     </div>
 </div>

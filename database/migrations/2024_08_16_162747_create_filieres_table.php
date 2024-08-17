@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('filieres', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
-            $table->foreignId('promotion_id')->constrained()->onDelete('cascade');
+           
             $table->timestamps();
         });
     }
