@@ -8,11 +8,11 @@
                 </li>
 
                 <li class="">
-                    <a href=""><i class="la la-briefcase"></i> <span>Pointage</span></a>
+                    <a href="{{ route('absence.index')}}"><i class="la la-briefcase"></i> <span>Pointage</span></a>
                 </li>
 
                 <li class="">
-                    <a href=""><i class="la la-briefcase"></i> <span>Séance Cours</span></a>
+                    <a href="{{route('seance-cours.index')}}"><i class="la la-briefcase"></i> <span>Séance Cours</span></a>
                 </li>
 
                 <li class="">
@@ -22,7 +22,7 @@
                     <a href="{{route('filiere.index')}}"><i class="la la-briefcase"></i> <span>Filière</span></a>
                 </li>
                 <li class="">
-                    <a href=""><i class="la la-briefcase"></i> <span>Inscription</span></a>
+                    <a href=""><i class="la la-briefcase"></i> <span>Annee Academique/span></a>
                 </li>
 
             </ul>
