@@ -57,8 +57,8 @@
                             <div class="card-body">
                                 <span class="dash-widget-icon"><i class="fa fa-address-card-o"></i></span>
                                 <div class="dash-widget-info">
-                                    <h3></h3>
-                                    <span></span>
+                                    <h3>Etudiants</h3>
+                                    <span>{{$countStudent }}</span>
                                 </div>
                             </div>
                         </div>
@@ -79,14 +79,12 @@
                 {{ session('message') }}
             </div>
             @endif
-           
-           
-            @if($isCreate)
-            @include('livewire.students.create')
-            @endif
-            @if($isList)
-            @include('livewire.students.list')
-            @endif
+                @if($isCreate)
+                @include('livewire.students.create')
+                @endif
+                @if($isList)
+                @include('livewire.students.list')
+                @endif
 
         </div>
     </div>

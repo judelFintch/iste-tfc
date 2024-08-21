@@ -11,6 +11,7 @@ class Students extends Component
     public $isUpdate = false;
     public $isCreate = false;
     public $isList = true;
+    public $countStudent = 0;
 
     // Règles de validation
     protected $rules = [
@@ -109,6 +110,7 @@ class Students extends Component
     public function render()
     {
         $this->etudiants = Etudiant::with('filiere')->get();
+        $this -> countStudent = Etudiant::count();
         return view('livewire.students.students');
     }
 }
