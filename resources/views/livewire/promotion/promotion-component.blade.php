@@ -19,6 +19,7 @@
                     <a href="#" wire:click="formAction('list')" class="btn add-btn" id="add_client"><i class="fa fa-plus"></i> Liste</a>
                     </div>
                     @endif
+                    
 
                 </div>
             </div>
