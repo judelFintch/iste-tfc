@@ -10,9 +10,15 @@
                             <li class="breadcrumb-item"><a href="dashboard">Dashboard</a></li>
                         </ul>
                     </div>
+                    @if(!$isCreate)
                     <div class="col-auto float-end ms-auto">
-                        <a href="#" wire:click="showForm()" class="btn add-btn" id="add_client"><i class="fa fa-plus"></i> Nouvel Etudiant</a>
+                        <a href="#" wire:click="formAction('create')" class="btn add-btn" id="add_client"><i class="fa fa-plus"></i> Nouveau</a>
                     </div>
+                    @else
+                    <div class="col-auto float-end ms-auto">
+                    <a href="#" wire:click="formAction('list')" class="btn add-btn" id="add_client"><i class="fa fa-plus"></i> Liste</a>
+                    </div>
+                    @endif
                 </div>
             </div>
 
@@ -74,10 +80,13 @@
             </div>
             @endif
            
+           
             @if($isCreate)
             @include('livewire.students.create')
             @endif
+            @if($isList)
             @include('livewire.students.list')
+            @endif
 
         </div>
     </div>

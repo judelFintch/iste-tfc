@@ -9,7 +9,8 @@ class Students extends Component
 {
     public $etudiants, $nom, $prenom, $email, $filiere_id, $etudiant_id;
     public $isUpdate = false;
-    public $isCreate = true;
+    public $isCreate = false;
+    public $isList = true;
 
     // Règles de validation
     protected $rules = [
@@ -19,12 +20,18 @@ class Students extends Component
         'filiere_id' => 'required|exists:filieres,id',
     ];
 
-    public function showForm(){
-        $this -> isCreate = 0;
 
-
+    public function formAction($type)
+    {
+        if ($type == 'create') {
+            $this->isCreate = true;
+            $this->isList = false;
+        }
+        else{
+            $this->isList = true;
+            $this->isCreate = false;
+        }
     }
-
     // Méthode pour réinitialiser les champs de saisie
     private function resetInputFields()
     {
