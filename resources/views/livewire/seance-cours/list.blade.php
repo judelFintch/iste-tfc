@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-12">
-        <h2>Liste des séances de cours</h2>
+        <h2>Séances de cours</h2>
         <table class="table table-striped custom-table datatable">
             <thead>
                 <tr>

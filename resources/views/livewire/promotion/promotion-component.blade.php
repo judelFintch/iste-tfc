@@ -5,7 +5,7 @@
             <div class="page-header">
                 <div class="row align-items-center">
                     <div class="col">
-                        <h3 class="page-title">Gestion séances de cours</h3>
+                        <h3 class="page-title">Gestion des promotions</h3>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="dashboard">Dashboard</a></li>
                         </ul>
@@ -14,7 +14,6 @@
                     <div class="col-auto float-end ms-auto">
                         <a href="#" wire:click="formAction('create')" class="btn add-btn" id="add_client"><i class="fa fa-plus"></i> Nouveau</a>
                     </div>
-
                     @else
                     <div class="col-auto float-end ms-auto">
                     <a href="#" wire:click="formAction('list')" class="btn add-btn" id="add_client"><i class="fa fa-plus"></i> Liste</a>
@@ -31,10 +30,10 @@
             @endif
 
             @if($isCreate)
-            @include('livewire.seance-cours.create')
+            @include('livewire.promotion.create')
             @endif
             @if($isList)
-            @include('livewire.seance-cours.list')
+            @include('livewire.promotion.list')
             @endif
         </div>
     </div>

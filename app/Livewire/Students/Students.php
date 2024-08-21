@@ -19,7 +19,6 @@ class Students extends Component
         'filiere_id' => 'required|exists:filieres,id',
     ];
 
-
     public function showForm(){
         $this -> isCreate = 0;
 

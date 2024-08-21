@@ -5,7 +5,6 @@ use Livewire\Component;
 use App\Models\SeanceCours;
 use App\Models\Filiere;
 use Carbon\Carbon;
-
 class SeanceCoursComponent extends Component
 {
     public $seances, $titre, $description, $date, $filiere_id, $seance_id;
@@ -22,13 +21,17 @@ class SeanceCoursComponent extends Component
         'filiere_id' => 'required|exists:filieres,id',
     ];
 
-    public function formAction()
+    public function formAction($type)
     {
-        $this->isCreate = true;
-        $this->isList = false;
-        $this -> test = 900 ;
+        if ($type == 'create') {
+            $this->isCreate = true;
+            $this->isList = false;
+        }
+        else{
+            $this->isList = true;
+            $this->isCreate = false;
+        }
     }
-
     // Réinitialiser les champs du formulaire
     private function resetInputFields()
     {

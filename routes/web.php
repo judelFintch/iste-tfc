@@ -6,6 +6,7 @@ Use App\Livewire\Students\Students;
 use App\Livewire\Filiere\FiliereComponent;
 use App\Livewire\Absence\AbesenceCompenent;
 use App\Livewire\SeanceCours\SeanceCoursComponent;
+use App\Livewire\Promotion\PromotionComponent;
 
 
 Route::get('/', function () { return view('auth.login');});
@@ -19,6 +20,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/ist-mange-filiere', FiliereComponent::class)->name('filiere.index');
     Route::get('/absence', AbesenceCompenent::class)->name('absence.index');
     Route::get('/seance-cours', SeanceCoursComponent::class)->name('seance-cours.index');
+    Route::get('/promotions', PromotionComponent::class)->name('promotion.index');
     
    
 
