@@ -1,6 +1,4 @@
 <?php
-
-
 namespace App\Livewire\SeanceCours;
 
 use Livewire\Component;
@@ -10,11 +8,11 @@ use Carbon\Carbon;
 
 class SeanceCoursComponent extends Component
 {
-
-
     public $seances, $titre, $description, $date, $filiere_id, $seance_id;
     public $isUpdate = false;
-    public $isCreate = true;
+    public $isCreate = false;
+    public $isList = true;
+    public $test = 1100;
 
     // Règles de validation
     protected $rules = [
@@ -23,6 +21,13 @@ class SeanceCoursComponent extends Component
         'date' => 'required|date',
         'filiere_id' => 'required|exists:filieres,id',
     ];
+
+    public function formAction()
+    {
+        $this->isCreate = true;
+        $this->isList = false;
+        $this -> test = 900 ;
+    }
 
     // Réinitialiser les champs du formulaire
     private function resetInputFields()
@@ -39,7 +44,6 @@ class SeanceCoursComponent extends Component
     public function store()
     {
         $this->validate();
-
         SeanceCours::create([
             'titre' => $this->titre,
             'description' => $this->description,
@@ -50,7 +54,7 @@ class SeanceCoursComponent extends Component
         session()->flash('message', 'Séance de cours créée avec succès.');
 
         $this->resetInputFields();
-        $this->emit('seanceStored'); // Événement pour rafraîchir la liste
+        $this->dispatch('seanceStored'); // Événement pour rafraîchir la liste
     }
 
     // Préparer l'édition d'une séance de cours
@@ -69,7 +73,6 @@ class SeanceCoursComponent extends Component
     public function update()
     {
         $this->validate();
-
         $seance = SeanceCours::find($this->seance_id);
         $seance->update([
             'titre' => $this->titre,
@@ -81,7 +84,7 @@ class SeanceCoursComponent extends Component
         session()->flash('message', 'Séance de cours mise à jour avec succès.');
 
         $this->resetInputFields();
-        $this->emit('seanceUpdated'); // Événement pour rafraîchir la liste
+        $this->dispatch('seanceUpdated'); // Événement pour rafraîchir la liste
     }
 
     // Supprimer une séance de cours

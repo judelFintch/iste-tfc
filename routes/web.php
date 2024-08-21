@@ -8,9 +8,7 @@ use App\Livewire\Absence\AbesenceCompenent;
 use App\Livewire\SeanceCours\SeanceCoursComponent;
 
 
-
 Route::get('/', function () { return view('auth.login');});
-
 
 
 //Route::get('/dashboard', function () {return view('dashboard');})->middleware(['auth', 'verified'])->name('dashboard');

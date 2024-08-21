@@ -19,6 +19,13 @@ class Students extends Component
         'filiere_id' => 'required|exists:filieres,id',
     ];
 
+
+    public function showForm(){
+        $this -> isCreate = 0;
+
+
+    }
+
     // Méthode pour réinitialiser les champs de saisie
     private function resetInputFields()
     {

@@ -48,7 +48,7 @@
 
             <div class="col-md-8">
                 <h2>Liste des absences</h2>
-                <table class="table table-striped">
+                <table class="table table-striped custom-table datatable">
                     <thead>
                         <tr>
                             <th>ID</th>
