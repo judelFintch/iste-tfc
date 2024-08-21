@@ -6,10 +6,11 @@
                 <thead>
                     <tr>
                         <th>#id</th>
-                        <th>Detail</th>
-                        <th>Date</th>
-                        <th>Plaque(s)</th>
-                        <th>Client</th>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Email</th>
+                        <th>Filiere</th>
+                        <th>Operations</th>
                     </tr>
                 </thead>
             
