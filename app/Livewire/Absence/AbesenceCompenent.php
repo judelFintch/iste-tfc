@@ -73,7 +73,7 @@ class AbesenceCompenent extends Component
         session()->flash('message', 'Absence mise à jour avec succès.');
 
         $this->resetInputFields();
-        $this->emit('absenceUpdated'); // Événement pour rafraîchir la liste
+        $this->dispatch('absenceUpdated'); // Événement pour rafraîchir la liste
     }
 
     // Supprimer une absence
