@@ -34,7 +34,7 @@
             @include('livewire.promotion.create')
             @endif
             @if($isList)
-            @include('livewire.promotion.list')
+            
             @endif
         </div>
     </div>

@@ -59,7 +59,7 @@ class Students extends Component
         session()->flash('message', 'Étudiant créé avec succès.');
 
         $this->resetInputFields();
-        $this->emit('Students'); // Événement pour actualiser la liste
+       $this->dispatch('Students'); // Événement pour actualiser la liste
     }
 
     // Méthode pour remplir le formulaire pour une mise à jour

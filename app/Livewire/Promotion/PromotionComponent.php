@@ -90,7 +90,8 @@ class PromotionComponent extends Component
     // Afficher la liste des promotions
     public function render()
     {
-        $promotions = Promotion::all();
+        $promotions = Promotion::paginate(10); // Par exemple, pour paginer les résultats
+
         return view('livewire.promotion.promotion-component', compact('promotions'));
     }
 }

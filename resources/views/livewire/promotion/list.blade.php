@@ -10,8 +10,8 @@
                     <th>Actions</th>
                 </tr>
             </thead>
-            <tbody>
-                @foreach ($promotions as $promotion)
+            <tbody>=+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                @foreach($promotions as $promotion)
                 <tr>
                     <td>{{ $promotion->id }}</td>
                     <td>{{ $promotion->nom }}</td>
@@ -24,6 +24,6 @@
                 @endforeach
             </tbody>
         </table>
-        {{ $promotions->links() }} <!-- Pagination links if you have pagination enabled -->
+        
     </div>
 </div>
