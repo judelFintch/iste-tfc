@@ -44,7 +44,7 @@ class AbesenceCompenent extends Component
         session()->flash('message', 'Absence enregistrée avec succès.');
 
         $this->resetInputFields();
-        $this->emit('absenceStored'); // Événement pour rafraîchir la liste
+       $this->dispatch('absenceStored'); // Événement pour rafraîchir la liste
     }
 
     // Préparer l'édition d'une absence
